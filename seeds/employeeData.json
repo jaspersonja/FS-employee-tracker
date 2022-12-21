@@ -1,0 +1,34 @@
+[
+    {
+        "id": 12654876,
+        "first_name": "Kenneth",
+        "last_name": "Kaiser",
+        "role": "QA Tester",
+        "salary": 100000,
+        "user_id": "KAISKE106"
+    },
+    {
+        "id": 123654789,
+        "first_name": "Jacob",
+        "last_name": "Jasperson",
+        "role": "Project Leader",
+        "salary": 200000,
+        "user_id": "JASPE106"
+    },
+    {
+        "id": 987456321,
+        "first_name": "Ashe",
+        "last_name": "Radusewicz",
+        "role": "Software Engineer",
+        "salary": 120000,
+        "user_id": "ASHRA106"
+    },
+    {
+        "id": 321654789,
+        "first_name": "Marlana",
+        "last_name": "Clemente",
+        "role": "Software Engineer",
+        "salary": 120000,
+        "user_id": "MARLAC106"
+    }
+]
