@@ -2,11 +2,11 @@
 
 const router = require('express').Router();
 //add file route into the code line
-const { employee } = require('/');
+const { Employee } = require('../models');
 
 router.post('/', async (req,res) => {
     try {
-        const newEmployee = await employee.create({
+        const newEmployee = await Employee.create({
             ...req.body,
             user_id: req.session.user_id,
         });
@@ -19,7 +19,7 @@ router.post('/', async (req,res) => {
 
 router.delete('/', async (req,res) => {
     try {
-        const employeeData = await employee.destroy({
+        const employeeData = await Employee.destroy({
             where: {
                 id: req.params.id,
                 user_id: req.session.user_id ,
