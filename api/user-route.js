@@ -1,6 +1,6 @@
 // This route is for the user profile.
 const router = require('express').Router();
-const { User } = require('');
+const { User } = require('../models');
 
 
 //will need to add in the file needed
@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
 
 
 //will need to add in the file needed
-router.post('/', async (req,res) => {
+router.post('/login', async (req,res) => {
     try {
         const userData = await User.findOne({ where: { user: req.body.user}});
         if (!userData) {
@@ -50,7 +50,7 @@ router.post('/', async (req,res) => {
     }
 });
 
-router.post('/', (req,res) => {
+router.post('/logout', (req,res) => {
     if (req.session.logged_in){
         req.session.destroy(() => {
             res.status(204).end();
