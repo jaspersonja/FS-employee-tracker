@@ -1,36 +1,50 @@
 <div class="section">
-<div class="level">
+  <div class="level">
     <h2>Welcome, {{name}}!</h2>
-</div>
+  </div>
 </div>
 
 <div class="section">
   <div class="level">
     <h3>Add a new Employee</h3>
 
-    <form class="form new-employee-form">
-      <div class="form-group">
-        <label for="employee-first-name">First Name:</label>
-        <input class="input" type="text" placeholder="First Name" />
-      </div>
+    <div class="field">
+      <label class="label">First Name:</label>
+      <input class="input" type="text" placeholder="First Name" />
+    </div>
 
-      <div class="form-group">
-        <label for="employee-last-name">Last Name:</label>
-        <input class="input" type="text" placeholder="Last Name" />
-      </div>
+    <div class="field">
+      <label class="label">Last Name:</label>
+      <input class="input" type="text" placeholder="Last Name" />
+    </div>
 
-      <div class="form-group">
-        <label for="project-funding">Role</label>
-        <input class="form-input" type="number" id="project-funding" name="project-funding" />
+    <div class="field">
+      <label class="label">Role:</label>
+      <div class="control">
+        <div class="select">
+          <select>
+            <option>QA Tester</option>
+            <option>Software Engineer</option>
+            <option>Project Leader</option>
+          </select>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="project-desc">description:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </form>
+    </div>
+
+    <div class="field">
+      <label class="label">Salary:</label>
+      <input class="input" type="number" placeholder="$------" />
+    </div>
+
+    <div class="field">
+      <label class="label">User ID:</label>
+      <input class="input" type="text" placeholder="ID #" />
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+
   </div>
 
   {{#if employee.length}}
