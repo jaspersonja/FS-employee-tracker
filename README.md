@@ -11,6 +11,10 @@ You can log into the website with an already created profile or you can create a
 ## Future User Story
 
 ## Contribuitors 
-
+Jacob Jasperson
+Kenneth Kaiser
+Marlana Clemente
+Ashe Radusewicz
 ## Credits
+
 
