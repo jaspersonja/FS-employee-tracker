@@ -41,23 +41,25 @@
       <input class="input" type="text" placeholder="ID #" />
     </div>
 
-    <div class="form-group">
-      <button type="submit" class="btn btn-primary">Create</button>
+    <div class="field is-grouped">
+      <div class="control">
+      <button class="button">Create</button>
+      </div>
     </div>
 
   </div>
 
   {{#if employee.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
+  <div class="level employee-list">
+    <h3>Current Employees:</h3>
 
-    {{#each projects as |project|}}
+    {{#each employees as |employee|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
+        <h4><a href="/employee-details/{{employee.id}}">{{employee.name}}</a></h4>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+        <button class="btn btn-sm btn-danger" data-id="{{employee.id}}">DELETE</button>
       </div>
     </div>
     {{/each}}
