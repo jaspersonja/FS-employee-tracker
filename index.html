@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <SCRIPT LANGUAGE="JavaScript">
+        function testResults (form) {
+            var jobVar = form.inputbox.value;
+            alert ("Employee " + jobVar + " is currently working on");
+        }
+        </SCRIPT>
+    <form action="" method="get">
+        <label for="fname">Employee</label>
+        <input type="text" id="EmployeeName" name="ename" value="">
+        <label for="lname">is currently working on </label>
+        <input type="text" id="tname" name="taskname" value="">
+        <input type="button" name="button" value="click" onclick="testResults(this.form)">
+      </form>
+      <br>
+      <FORM NAME="myform" ACTION="" METHOD="GET">Enter something in the box: <BR>
+        <INPUT TYPE="text" NAME="inputbox" VALUE=""><P>
+        <INPUT TYPE="button" NAME="button" Value="Click" onClick="testResults(this.form)">
+        </FORM>
+    <label>Current Jobs in Progress</label>
+</body>
+</html>
