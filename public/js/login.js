@@ -4,22 +4,24 @@ const loginFormHandler = async (e) => {
     e.preventDefault();
     console.log("loginFormHandler");
     //collecting values from the form
-    const username = document.querySelector('#email-login').value
-    const password = document.querySelector('#password-login').value
+    const username = document.querySelector('#email-login').value.trim();
+    const password = document.querySelector('#password-login').value.trim();
 console.log(username);
 console.log(password);
     if( username && password) {
         //where we are fetching the information from. 
-        const response = await fetch ('./api/user-route',  {
+        const response = await fetch ('/api/users/login',  {
             method: 'POST',
-            body: JSON.stringify({ username, password }),
+            headers: { 'Content-Type': 'application/json'},
+            body: JSON.stringify( {username, password} ),
             // where the info will be. 
-            headers: { 'Content-Type': ''},
+            // headers: { 'Content-Type': 'application/json'},
         });
         if (response.ok) {
             // will redirect to profile page, if login is good
             document.location.replace('/');
         } else {
+            console.log(response)
             alert(response.statusText);
         }
     }
